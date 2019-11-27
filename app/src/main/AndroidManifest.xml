@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.btbsolutions.timekeeper">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".AdvertisementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.NavigationActivity" />
+        <activity android:name=".HelpOverlayActivity" />
+        <activity
+            android:name=".activities.WeeklyMetricActivity"
+            android:label="@string/title_activity_weekly_metric"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".DeviceBootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ad_appId" />
+
+        <activity
+            android:name=".ForgotPassword"
+            android:parentActivityName=".LoginForm" />
+
+        <service
+            android:name=".NotificationTipsService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name=".NotificationTipsReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".NotificationIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name=".NightNotificationReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".HowToGuide"
+            android:parentActivityName=".activities.SettingsActivity" />
+        <activity
+            android:name=".MetricValuesActivity"
+            android:label="All Tasks"
+            android:parentActivityName=".activities.MainActivity" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name=".CarryForwardReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.DailyTaskActivity"
+            android:label="@string/navigation_daily_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddDailyTask"
+            android:label="@string/add_new_daily_task" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/action_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UpdateToDoItem"
+            android:label="@string/update_todo_task_page_title" />
+        <activity
+            android:name=".AddNewItem"
+            android:label="@string/add_to_do_task_page_title" />
+        <activity
+            android:name=".DisplayTodoDetail"
+            android:label="Display To Do Task Detail"
+            android:parentActivityName=".activities.CalendarActivity" />
+        <activity
+            android:name=".activities.CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginForm">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegistrationForm"
+            android:label="@string/register_page_title"
+            android:parentActivityName=".LoginForm" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryLight">#64B5F6</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+
+    <color name="colorScreenBackground">#fff3e0</color>
+
+    <color name="colorAccent">#FF9800</color>
+    <color name="colorClick">#FFDDDDDD</color>
+
+    <color name="radioGroupBackground">#EEEEEE</color>
+
+    <color name="priority1">#FF8080</color>
+    <color name="priority2">#8080FF</color>
+    <color name="priority3">#80FF80</color>
+
+    <color name="display_priority1">#ffcccc</color>
+    <color name="display_priority2">#ccccff</color>
+    <color name="display_priority3">#ccffcc</color>
+
+    <color name="help_background">#bc000000</color>
+    <color name="colorIcon">#02B7FF</color>
+    <color name="Navigation1">#0B6AB6</color>
+    <color name="Navigation3">#650AEC</color>
+    <color name="Navigation4">#3E38FF</color>
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NavigationActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_heading"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/colorIcon">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:drawableStart="@drawable/app_icon_navi_page"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/click_background_selector"
+                    android:onClick="toSettings"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_settings_black_40dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_navipage_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_heading"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/navigation_page_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+            <LinearLayout
+                android:id="@+id/ll_row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_navipage_title"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/click_background_selector"
+                    android:drawableStart="@drawable/ic_format_list_bulleted_black_60dp"
+                    android:gravity="center_vertical"
+                    android:onClick="toTodo"
+                    android:text="@string/navigation_todo_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/Navigation1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/click_background_selector"
+                    android:drawableStart="@drawable/ic_hourglass_empty_black_60dp"
+                    android:gravity="center_vertical"
+                    android:onClick="toDailyTask"
+                    android:text="@string/navigation_time_log_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/Navigation2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_row1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/click_background_selector"
+                    android:drawableStart="@drawable/ic_today_black_60dp"
+                    android:gravity="center_vertical"
+                    android:onClick="toDailyMetric"
+                    android:text="@string/navigation_daily_metric_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/Navigation3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/click_background_selector"
+                    android:drawableStart="@drawable/ic_view_week_black_60dp"
+                    android:gravity="center_vertical"
+                    android:onClick="toWeeklyMetric"
+                    android:text="@string/navigation_weekly_metric_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/Navigation4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ll_row2">
+
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Welcome Text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_above="@id/adView">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:onClick="toAddDailyTask"
+            android:background="@drawable/click_background_selector"
+            android:src="@drawable/ic_edit_black_50dp"
+            android:contentDescription="Add Daily Task" />
+
+    </RelativeLayout>
+
+    <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/test_adUnitId_banner">
+
+        &lt;!&ndash;product AdUnitId -> ca-app-pub-9258126810382458/9318925702 &ndash;&gt;
+        &lt;!&ndash;test AdUnitId -> @string/test_adUnitId_banner &ndash;&gt;
+
+    </com.google.android.gms.ads.AdView>-->
+
+    <ImageView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

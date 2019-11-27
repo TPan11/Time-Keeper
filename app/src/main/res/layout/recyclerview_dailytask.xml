@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/container_timeline_indicator"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_timeline_indicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/blue_circle" />
+
+        <TextView
+            android:id="@+id/tv_timeline_indicator_line"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv_timeline_indicator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="#5c88c6" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_clickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_timeline_starttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Start Time"
+            android:textStyle="italic"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Name: "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_timeline_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="Task Name" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Duration: "
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_timeline_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="Duration of Task" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type of Task: "
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_timeline_metric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="Metric of Task" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_timeline_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="End Time"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MetricValuesActivity">
+
+    <TextView
+        android:id="@+id/no_entry_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No Entry"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_metric_tasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:listitem="@layout/recyclerview_display_tasks"
+        android:visibility="gone"/>
+
+</RelativeLayout>
